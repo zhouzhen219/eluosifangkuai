@@ -1,0 +1,2 @@
+D:\a_computer\Game_gw\mingw64\bin\ar.exe qc ..\..\sfml-build\lib\libvorbisencd.a CMakeFiles/vorbisenc.dir/vorbisenc.c.obj
+D:\a_computer\Game_gw\mingw64\bin\ranlib.exe ..\..\sfml-build\lib\libvorbisencd.a

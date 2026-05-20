@@ -1,0 +1,2 @@
+D:\a_computer\Game_gw\mingw64\bin\ar.exe qc ..\sfml-build\lib\liboggd.a CMakeFiles/ogg.dir/src/bitwise.c.obj CMakeFiles/ogg.dir/src/framing.c.obj
+D:\a_computer\Game_gw\mingw64\bin\ranlib.exe ..\sfml-build\lib\liboggd.a

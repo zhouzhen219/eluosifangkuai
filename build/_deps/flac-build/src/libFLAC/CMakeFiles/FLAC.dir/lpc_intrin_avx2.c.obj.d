@@ -1,0 +1,22 @@
+_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc_intrin_avx2.c.obj: \
+ D:\a_computer\game\eluosifangkuai\build\_deps\flac-src\src\libFLAC\lpc_intrin_avx2.c \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-build/config.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/src/libFLAC/include/private/cpu.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/include/FLAC/ordinals.h \
+ D:/a_computer/Game_gw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ D:/a_computer/Game_gw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/stddef.h \
+ D:/a_computer/Game_gw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdbool.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/src/libFLAC/include/private/lpc.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/src/libFLAC/include/private/float.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/include/FLAC/format.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/include/FLAC/export.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/include/FLAC/ordinals.h

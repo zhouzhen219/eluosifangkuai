@@ -1,0 +1,14 @@
+# Target labels
+ ogg-populate
+# Source files and their labels
+D:/a_computer/game/eluosifangkuai/build/_deps/ogg-subbuild/CMakeFiles/ogg-populate
+D:/a_computer/game/eluosifangkuai/build/_deps/ogg-subbuild/CMakeFiles/ogg-populate.rule
+D:/a_computer/game/eluosifangkuai/build/_deps/ogg-subbuild/CMakeFiles/ogg-populate-complete.rule
+D:/a_computer/game/eluosifangkuai/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-build.rule
+D:/a_computer/game/eluosifangkuai/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-configure.rule
+D:/a_computer/game/eluosifangkuai/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-download.rule
+D:/a_computer/game/eluosifangkuai/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-install.rule
+D:/a_computer/game/eluosifangkuai/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-mkdir.rule
+D:/a_computer/game/eluosifangkuai/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-patch.rule
+D:/a_computer/game/eluosifangkuai/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-test.rule
+D:/a_computer/game/eluosifangkuai/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-update.rule

@@ -1,0 +1,1 @@
+-I"D:/a_computer/game/eluosifangkuai/build/_deps/flac-build" -I"D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/src/libFLAC/include" -isystem "D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/include" -isystem "D:/a_computer/game/eluosifangkuai/build/_deps/ogg-src/include" -isystem "D:/a_computer/game/eluosifangkuai/build/_deps/ogg-build/include"

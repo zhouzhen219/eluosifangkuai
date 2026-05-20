@@ -1,0 +1,2 @@
+D:\a_computer\Game_gw\mingw64\bin\ar.exe qc ..\..\sfml-build\lib\libvorbisfiled.a CMakeFiles/vorbisfile.dir/vorbisfile.c.obj
+D:\a_computer\Game_gw\mingw64\bin\ranlib.exe ..\..\sfml-build\lib\libvorbisfiled.a

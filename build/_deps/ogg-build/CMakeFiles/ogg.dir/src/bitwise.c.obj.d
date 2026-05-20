@@ -1,0 +1,26 @@
+_deps/ogg-build/CMakeFiles/ogg.dir/src/bitwise.c.obj: \
+ D:\a_computer\game\eluosifangkuai\build\_deps\ogg-src\src\bitwise.c \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/string.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ D:/a_computer/Game_gw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
+ D:/a_computer/Game_gw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/limits.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/malloc.h \
+ D:/a_computer/Game_gw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/errno.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/ogg-src/include/ogg/ogg.h \
+ D:/a_computer/Game_gw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/stddef.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/ogg-src/include/ogg/os_types.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h

@@ -1,0 +1,34 @@
+_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/ogg_decoder_aspect.c.obj: \
+ D:\a_computer\game\eluosifangkuai\build\_deps\flac-src\src\libFLAC\ogg_decoder_aspect.c \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-build/config.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/string.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/include/FLAC/assert.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/src/libFLAC/include/private/ogg_decoder_aspect.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/ogg-src/include/ogg/ogg.h \
+ D:/a_computer/Game_gw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/stddef.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/ogg-src/include/ogg/os_types.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/include/FLAC/ordinals.h \
+ D:/a_computer/Game_gw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ D:/a_computer/Game_gw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdbool.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/include/FLAC/stream_decoder.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/stdio.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+ D:/a_computer/Game_gw/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/include/FLAC/export.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/include/FLAC/format.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/include/FLAC/ordinals.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/src/libFLAC/include/private/ogg_mapping.h \
+ D:/a_computer/game/eluosifangkuai/build/_deps/flac-src/src/libFLAC/include/private/macros.h
