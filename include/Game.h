@@ -13,16 +13,32 @@ public:
     void gameRun();
 
 private:
+    enum class ResultPhase
+    {
+        Playing,
+        EliminationNotice,
+        VictoryNotice,
+        Finished
+    };
+
     void gameInitial();
     void LoadMediaData();
     void gameInput();
     void gameLogic();
     void gameDraw();
+    void startResultSequence(int loserPlayer, int winnerPlayer);
+    void drawResultOverlay();
 
     sf::RenderWindow window;
     Tetris player1, player2;
     bool isGameOver;
     bool isGameQuit;
+    ResultPhase resultPhase;
+    int resultLoserPlayer;
+    int resultWinnerPlayer;
+    sf::Clock resultClock;
+    sf::Font uiFont;
+    bool hasUiFont;
 
     sf::Texture tBackground, tTiles;
     sf::Texture emptyTexture;

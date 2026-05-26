@@ -1,8 +1,9 @@
 #include "Game.h"
 
 Game::Game()
-    : window(), player1(), player2(), isGameOver(false), isGameQuit(false), tBackground(), tTiles(),
-      emptyTexture(), sBackground(emptyTexture), window_width(1350), window_height(1000), imgBGno(1),
+    : window(), player1(), player2(), isGameOver(false), isGameQuit(false), resultPhase(ResultPhase::Playing),
+      resultLoserPlayer(0), resultWinnerPlayer(0), resultClock(), uiFont(), hasUiFont(false), tBackground(),
+      tTiles(), emptyTexture(), sBackground(emptyTexture), window_width(1350), window_height(1000), imgBGno(1),
       imgSkinNo(1), gameClock()
 {
     window.create(sf::VideoMode({static_cast<unsigned int>(window_width), static_cast<unsigned int>(window_height)}), "Dual Tetris");
@@ -63,6 +64,12 @@ void Game::LoadMediaData()
         tTiles = sf::Texture(img);
     }
     sBackground.setTexture(tBackground, true);
+
+    hasUiFont = uiFont.openFromFile("C:/Windows/Fonts/msyh.ttc");
+    if (!hasUiFont)
+        hasUiFont = uiFont.openFromFile("C:/Windows/Fonts/simhei.ttf");
+    if (!hasUiFont)
+        hasUiFont = uiFont.openFromFile("C:/Windows/Fonts/arial.ttf");
 }
 
 void Game::gameInitial()
@@ -72,7 +79,11 @@ void Game::gameInitial()
     player1.Initial(&tTiles, &window, rolePLAYER1);
     player2.Initial(&tTiles, &window, rolePLAYER2);
     isGameOver = false;
+    resultPhase = ResultPhase::Playing;
+    resultLoserPlayer = 0;
+    resultWinnerPlayer = 0;
     gameClock.restart();
+    resultClock.restart();
 }
 
 void Game::gameInput()
@@ -84,23 +95,66 @@ void Game::gameInput()
             window.close();
             isGameQuit = true;
         }
-        player1.Input(event);
-        player2.Input(event);
+        if (resultPhase == ResultPhase::Playing)
+        {
+            player1.Input(event);
+            player2.Input(event);
+        }
     }
+}
+
+void Game::startResultSequence(int loserPlayer, int winnerPlayer)
+{
+    resultLoserPlayer = loserPlayer;
+    resultWinnerPlayer = winnerPlayer;
+    resultPhase = ResultPhase::EliminationNotice;
+    resultClock.restart();
 }
 
 void Game::gameLogic()
 {
-    float time = gameClock.restart().asSeconds();
-    if (time > 0.033f)
-        time = 0.033f;
-    player1.timer += time;
-    player2.timer += time;
-    player1.Logic();
-    player2.Logic();
-    // 原逻辑：任一玩家死亡即结束
-    // 修改为：仅当双方都死亡时才结束，另一方可以继续游戏
-    isGameOver = (player1.isGameOver && player2.isGameOver);
+    if (resultPhase == ResultPhase::Playing)
+    {
+        float time = gameClock.restart().asSeconds();
+        if (time > 0.033f)
+            time = 0.033f;
+        player1.timer += time;
+        player2.timer += time;
+        player1.Logic();
+        player2.Logic();
+
+        if (player1.isGameOver || player2.isGameOver)
+        {
+            if (player1.isGameOver && !player2.isGameOver)
+            {
+                startResultSequence(1, 2);
+            }
+            else if (player2.isGameOver && !player1.isGameOver)
+            {
+                startResultSequence(2, 1);
+            }
+            else
+            {
+                resultLoserPlayer = 0;
+                resultWinnerPlayer = 0;
+                resultPhase = ResultPhase::VictoryNotice;
+                resultClock.restart();
+                isGameOver = true;
+            }
+        }
+        return;
+    }
+
+    float elapsed = resultClock.getElapsedTime().asSeconds();
+    if (resultPhase == ResultPhase::EliminationNotice && elapsed >= 1.5f)
+    {
+        resultPhase = ResultPhase::VictoryNotice;
+        resultClock.restart();
+    }
+    else if (resultPhase == ResultPhase::VictoryNotice && elapsed >= 1.5f)
+    {
+        isGameOver = true;
+    }
 }
 
 void Game::gameDraw()
@@ -123,7 +177,65 @@ void Game::gameDraw()
     }
     player1.Draw();
     player2.Draw();
+
+    if (resultPhase != ResultPhase::Playing)
+        drawResultOverlay();
+
     window.display();
+}
+
+void Game::drawResultOverlay()
+{
+    if (!hasUiFont)
+        return;
+
+    sf::RectangleShape overlay(sf::Vector2f(static_cast<float>(window_width), static_cast<float>(window_height)));
+    overlay.setFillColor(sf::Color(0, 0, 0, 165));
+    window.draw(overlay);
+
+    sf::Text title(uiFont);
+    title.setCharacterSize(54);
+    title.setStyle(sf::Text::Bold);
+    title.setFillColor(sf::Color::White);
+
+    sf::Text detail(uiFont);
+    detail.setCharacterSize(32);
+    detail.setFillColor(sf::Color(230, 230, 230));
+
+    if (resultPhase == ResultPhase::EliminationNotice)
+    {
+        title.setString(resultLoserPlayer == 1 ? "Player 1 eliminated" : "Player 2 eliminated");
+        detail.setString("Bomb card triggered, player removed from the match");
+    }
+    else if (resultPhase == ResultPhase::VictoryNotice)
+    {
+        if (resultWinnerPlayer == 0)
+        {
+            title.setString("Draw");
+            detail.setString("Both players were eliminated");
+        }
+        else
+        {
+            title.setString(resultWinnerPlayer == 1 ? "Player 1 wins" : "Player 2 wins");
+            detail.setString("The other player has been eliminated");
+        }
+    }
+    else
+    {
+        title.setString("Match over");
+        detail.setString("No winner could be determined");
+    }
+
+    auto titleBounds = title.getLocalBounds();
+    title.setOrigin(titleBounds.getCenter());
+    title.setPosition(sf::Vector2f(static_cast<float>(window_width) * 0.5f, static_cast<float>(window_height) * 0.42f));
+
+    auto detailBounds = detail.getLocalBounds();
+    detail.setOrigin(detailBounds.getCenter());
+    detail.setPosition(sf::Vector2f(static_cast<float>(window_width) * 0.5f, static_cast<float>(window_height) * 0.52f));
+
+    window.draw(title);
+    window.draw(detail);
 }
 
 void Game::gameRun()
